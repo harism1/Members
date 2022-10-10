@@ -1,0 +1,50 @@
+﻿@model Male
+
+@{
+	ViewData["Title"] = "Edit Member";
+}
+
+
+<div class="container col-8">
+<h1 class="text-primary">Edit Male Member</h1>
+<form method="post" asp-action="Edit">
+	<div class="mb-3">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control"/>	
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Age"></label>
+		<input asp-for="Age" class="form-control"/>
+		<span asp-validation-for="Age" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Height"></label>
+		<input asp-for="Height" class="form-control"/>
+		<span asp-validation-for="Height" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="FavSport"></label>
+		<select asp-for="FavSport" class="form-control">
+			<option value="Football">Football</option>
+			<option value="Basketball">Basketball</option>
+			<option value="Tennis">Tennis</option>
+			<option value="Table tennis">Table tennis</option>
+			<option value="Badminton">Badminton</option>
+			<option value="Volleyball">Volleyball</option>
+			<option value="Baseball">Baseball</option>
+			<option value="Other">Other</option>
+		</select>
+		<span asp-validation-for="FavSport" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+	<a asp-controller="Males" asp-action="Index" class="btn btn-secondary"
+	style="width:150px">Cancel</a>
+</form>
+</div>
+
+@section Scripts{
+@{
+    <partial name="_ValidationScriptsPartial" />
+}
+}

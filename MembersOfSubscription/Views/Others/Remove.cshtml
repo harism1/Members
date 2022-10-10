@@ -1,0 +1,31 @@
+﻿@model Other
+
+@{
+	ViewData["Title"] = "Remove Member";
+}
+
+
+<div class="container col-8">
+<h1 class="text-primary">Remove Member</h1>
+<form method="post" asp-action="Remove">
+	<div class="mb-3">
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control" disabled/>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Age"></label>
+		<input asp-for="Age" class="form-control" disabled/>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Weight"></label>
+		<input asp-for="Weight" class="form-control" disabled/>
+	</div>
+	<div class="mb-3">
+		<label asp-for="EyeColor"></label>
+		<input asp-for="EyeColor" class="form-control" disabled/>
+	</div>
+	<button type="submit" class="btn btn-danger" style="width:150px">Remove</button>
+	<a asp-controller="Others" asp-action="Index" class="btn btn-secondary"
+	style="width:150px">Cancel</a>
+</form>
+</div>

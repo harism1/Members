@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Other>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+	<div class="row pt-3">
+		<div class="col-6">
+			<h2>Others</h2>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-controller="Others" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-lg"></i></a>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<div class="row">
+					<th class="col-2">Name</th>
+					<th class="col-2">Age</th>
+					<th class="col-2">Weight (in kilograms)</th>
+					<th class="col-2">Eye color</th>
+					<th class="col-4">Member since</th>
+				</div>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Other m in Model)
+			{
+				<tr>
+					<td>@m.Name</td>
+					<td>@m.Age</td>
+					<td>@m.Weight</td>
+					<td>@m.EyeColor</td>
+					<td>@m.MemberSince.ToString("dd/MMM/yyyy")
+						<div class="btn-group w-25 float-end" role="group">
+							<a class="btn btn-secondary mx-2" asp-route-id="@m.Id"
+							asp-controller="Others" asp-action="Edit">
+							<i class="bi bi-pencil-square"></i></a>
+							<a class="btn btn-danger" asp-route-id="@m.Id" 
+							asp-controller="Others" 
+							asp-action="Remove"><i class="bi bi-trash"></i></a>
+						</div>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
