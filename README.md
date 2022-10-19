@@ -1,4 +1,4 @@
-# Membership website
+# Membership webapp
 
 Simple and quick project I made using ASP.NET MVC mainly for learning databases and handling them in a DBMS, and obviously ASP.NET with the MVC (Model View Controller) architecture.
 
