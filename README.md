@@ -1,8 +1,8 @@
 # Membership webapp
 
-Simple and quick project I made using ASP.NET MVC mainly for learning databases and handling them in a DBMS, and obviously ASP.NET with the MVC (Model View Controller) architecture.
+Quick and simple project I made using ASP.NET MVC mainly for learning databases.
 
-A lot of the implementations either don't make sense, or are unnecessary. As I already mentioned, this is purely for practice (e.g. I made different Models - in this case, Males, Females, and Others - so I could learn to implement different migrations). 
+Most implementations don't make sense. As I already mentioned, this is purely for practice (e.g. I made different Models - in this case, Males, Females, and Others - so I could learn to implement different migrations). 
 
 ## How it works
 
